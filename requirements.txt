@@ -1,0 +1,9 @@
+# Backend deps for the spritegen server + pipeline.
+# Create the local env with:
+#   python3 -m venv env && ./env/bin/pip install -r requirements.txt
+
+fastapi>=0.94
+uvicorn>=0.23
+Pillow>=9.5
+numpy>=1.26
+scipy>=1.11

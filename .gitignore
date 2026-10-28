@@ -1,0 +1,10 @@
+.env
+out/
+env/
+venv/
+.venv/
+__pycache__/
+*.pyc
+frontend/node_modules/
+frontend/dist/
+frontend/bun.lock
