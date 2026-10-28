@@ -104,12 +104,3 @@ $PY cli.py make --prompt "粉红史莱姆，可爱像素风" --action idle --mod
 | GET  | `/api/characters` | 角色库列表 |
 | GET  | `/api/gallery` | 最近生成的精灵表 |
 | GET  | `/files/...` | 产物（sheet/preview/帧/master） |
-
-## 已知限制
-
-- **`qwen3.8-flash` 可用性未在本机验证**（所在 shell 无 `QWEN_MAAS_KEY`）。可用 `--llm-model` 换模型，
-  或用 `--no-llm` / 关闭 LLM 走静态模板。启动前可先探针：
-  `python -c "from spritegen import qwen; print(qwen.chat([{'role':'user','content':'hi'}]))"`。
-- **不支持上传参考图**：本网关 `qwen-image` 只做 text2image；「一致性」靠自产 master 复用实现。
-- **master 的 OSS URL 会过期**：服务端超过 2 小时会按原描述重新生成 master（`MAX_URL_AGE`）。
-- 4 GB 显存与本项目无关——生成走云端网关，本机只做抠像/打包。
